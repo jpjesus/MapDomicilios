@@ -16,6 +16,8 @@
 		EA70F6CF2042271100985735 /* SchoolBusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6CE2042271100985735 /* SchoolBusCollectionCell.swift */; };
 		EA70F6D12042272B00985735 /* SchoolBusCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA70F6D02042272B00985735 /* SchoolBusCollectionCell.xib */; };
 		EA70F6D320422F7100985735 /* SchoolBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6D220422F7100985735 /* SchoolBusViewModel.swift */; };
+		EA70F6D92042F50200985735 /* DefaultReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6D72042F50200985735 /* DefaultReachabilityService.swift */; };
+		EA70F6DA2042F50200985735 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6D82042F50200985735 /* ActivityIndicator.swift */; };
 		EAC68072204193570059197A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68071204193560059197A /* AppDelegate.swift */; };
 		EAC68074204193570059197A /* SchoolBusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68073204193570059197A /* SchoolBusVC.swift */; };
 		EAC68077204193570059197A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC68075204193570059197A /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		EA70F6CE2042271100985735 /* SchoolBusCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusCollectionCell.swift; sourceTree = "<group>"; };
 		EA70F6D02042272B00985735 /* SchoolBusCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolBusCollectionCell.xib; sourceTree = "<group>"; };
 		EA70F6D220422F7100985735 /* SchoolBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusViewModel.swift; sourceTree = "<group>"; };
+		EA70F6D72042F50200985735 /* DefaultReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultReachabilityService.swift; sourceTree = "<group>"; };
+		EA70F6D82042F50200985735 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		EAC6806E204193560059197A /* MapaDomicilios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapaDomicilios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC68071204193560059197A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC68073204193570059197A /* SchoolBusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusVC.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EA70F6D42042F4CA00985735 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA70F6D82042F50200985735 /* ActivityIndicator.swift */,
+				EA70F6D72042F50200985735 /* DefaultReachabilityService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		EAC68065204193560059197A = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		EAC68070204193560059197A /* MapaDomicilios */ = {
 			isa = PBXGroup;
 			children = (
+				EA70F6D42042F4CA00985735 /* Network */,
 				EA70F6CD2042234700985735 /* View */,
 				EA70F6CC204221E700985735 /* ViewModel */,
 				EA70F6C72041AA0200985735 /* API */,
@@ -485,6 +499,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -500,6 +515,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -537,8 +553,10 @@
 				EA70F6C92041AFB000985735 /* BusAPI.swift in Sources */,
 				EA70F6D320422F7100985735 /* SchoolBusViewModel.swift in Sources */,
 				EAC680A1204193EA0059197A /* SchoolBus.swift in Sources */,
+				EA70F6D92042F50200985735 /* DefaultReachabilityService.swift in Sources */,
 				EA70F6CF2042271100985735 /* SchoolBusCollectionCell.swift in Sources */,
 				EAC68074204193570059197A /* SchoolBusVC.swift in Sources */,
+				EA70F6DA2042F50200985735 /* ActivityIndicator.swift in Sources */,
 				EAC68072204193570059197A /* AppDelegate.swift in Sources */,
 				EA70F6C62041A74E00985735 /* Stop.swift in Sources */,
 				EA70F6CB2041BBF600985735 /* APINetwork.swift in Sources */,
