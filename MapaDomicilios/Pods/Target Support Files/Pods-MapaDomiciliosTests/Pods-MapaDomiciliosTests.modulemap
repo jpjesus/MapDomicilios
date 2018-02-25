@@ -1,0 +1,6 @@
+framework module Pods_MapaDomiciliosTests {
+  umbrella header "Pods-MapaDomiciliosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

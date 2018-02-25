@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5A35D42E020D4B521E4F77 /* Pods_MapaDomiciliosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D09884EA8979AAEC623BC46 /* Pods_MapaDomiciliosTests.framework */; };
+		9F688863609144E6FA211845 /* Pods_MapaDomicilios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A2CFAC8A76146341E96432 /* Pods_MapaDomicilios.framework */; };
+		C97808B6162CC290718102BE /* Pods_MapaDomiciliosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5160C137015394DCDACEC7 /* Pods_MapaDomiciliosUITests.framework */; };
+		EA70F6C62041A74E00985735 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6C52041A74E00985735 /* Stop.swift */; };
+		EA70F6C92041AFB000985735 /* BusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6C82041AFB000985735 /* BusAPI.swift */; };
+		EA70F6CB2041BBF600985735 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6CA2041BBF600985735 /* APINetwork.swift */; };
+		EA70F6CF2042271100985735 /* SchoolBusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6CE2042271100985735 /* SchoolBusCollectionCell.swift */; };
+		EA70F6D12042272B00985735 /* SchoolBusCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA70F6D02042272B00985735 /* SchoolBusCollectionCell.xib */; };
+		EA70F6D320422F7100985735 /* SchoolBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70F6D220422F7100985735 /* SchoolBusViewModel.swift */; };
 		EAC68072204193570059197A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68071204193560059197A /* AppDelegate.swift */; };
-		EAC68074204193570059197A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68073204193570059197A /* ViewController.swift */; };
+		EAC68074204193570059197A /* SchoolBusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68073204193570059197A /* SchoolBusVC.swift */; };
 		EAC68077204193570059197A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC68075204193570059197A /* Main.storyboard */; };
 		EAC68079204193570059197A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC68078204193570059197A /* Assets.xcassets */; };
 		EAC6807C204193570059197A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC6807A204193570059197A /* LaunchScreen.storyboard */; };
 		EAC68087204193570059197A /* MapaDomiciliosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68086204193570059197A /* MapaDomiciliosTests.swift */; };
 		EAC68092204193570059197A /* MapaDomiciliosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC68091204193570059197A /* MapaDomiciliosUITests.swift */; };
+		EAC680A1204193EA0059197A /* SchoolBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC680A0204193EA0059197A /* SchoolBus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A2CFAC8A76146341E96432 /* Pods_MapaDomicilios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapaDomicilios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9193BAAF47FC6A463DC741 /* Pods-MapaDomicilios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomicilios.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomicilios/Pods-MapaDomicilios.release.xcconfig"; sourceTree = "<group>"; };
+		4DC3A23E3291F453B7833CA3 /* Pods-MapaDomiciliosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomiciliosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomiciliosUITests/Pods-MapaDomiciliosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D09884EA8979AAEC623BC46 /* Pods_MapaDomiciliosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapaDomiciliosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5160C137015394DCDACEC7 /* Pods_MapaDomiciliosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapaDomiciliosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31F970E28873128809CFA46 /* Pods-MapaDomiciliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomiciliosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomiciliosTests/Pods-MapaDomiciliosTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6951FF2605E4D4771B3ACCA /* Pods-MapaDomiciliosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomiciliosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomiciliosUITests/Pods-MapaDomiciliosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5B1DFC3B15A7CB190862354 /* Pods-MapaDomiciliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomiciliosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomiciliosTests/Pods-MapaDomiciliosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA70F6C52041A74E00985735 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		EA70F6C82041AFB000985735 /* BusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusAPI.swift; sourceTree = "<group>"; };
+		EA70F6CA2041BBF600985735 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
+		EA70F6CE2042271100985735 /* SchoolBusCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusCollectionCell.swift; sourceTree = "<group>"; };
+		EA70F6D02042272B00985735 /* SchoolBusCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolBusCollectionCell.xib; sourceTree = "<group>"; };
+		EA70F6D220422F7100985735 /* SchoolBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusViewModel.swift; sourceTree = "<group>"; };
 		EAC6806E204193560059197A /* MapaDomicilios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapaDomicilios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC68071204193560059197A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAC68073204193570059197A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAC68073204193570059197A /* SchoolBusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusVC.swift; sourceTree = "<group>"; };
 		EAC68076204193570059197A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAC68078204193570059197A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAC6807B204193570059197A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +71,8 @@
 		EAC6808D204193570059197A /* MapaDomiciliosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapaDomiciliosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC68091204193570059197A /* MapaDomiciliosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaDomiciliosUITests.swift; sourceTree = "<group>"; };
 		EAC68093204193570059197A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC680A0204193EA0059197A /* SchoolBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBus.swift; sourceTree = "<group>"; };
+		FFCDE7AFCE5A5F42F5F4E5DD /* Pods-MapaDomicilios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapaDomicilios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapaDomicilios/Pods-MapaDomicilios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F688863609144E6FA211845 /* Pods_MapaDomicilios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5A35D42E020D4B521E4F77 /* Pods_MapaDomiciliosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +96,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97808B6162CC290718102BE /* Pods_MapaDomiciliosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B37E208A10D49E88824208B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A2CFAC8A76146341E96432 /* Pods_MapaDomicilios.framework */,
+				9D09884EA8979AAEC623BC46 /* Pods_MapaDomiciliosTests.framework */,
+				BE5160C137015394DCDACEC7 /* Pods_MapaDomiciliosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2ECD97CBDBF3C3211D9E1C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDE7AFCE5A5F42F5F4E5DD /* Pods-MapaDomicilios.debug.xcconfig */,
+				2E9193BAAF47FC6A463DC741 /* Pods-MapaDomicilios.release.xcconfig */,
+				D5B1DFC3B15A7CB190862354 /* Pods-MapaDomiciliosTests.debug.xcconfig */,
+				C31F970E28873128809CFA46 /* Pods-MapaDomiciliosTests.release.xcconfig */,
+				C6951FF2605E4D4771B3ACCA /* Pods-MapaDomiciliosUITests.debug.xcconfig */,
+				4DC3A23E3291F453B7833CA3 /* Pods-MapaDomiciliosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA70F6C72041AA0200985735 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EA70F6C82041AFB000985735 /* BusAPI.swift */,
+				EA70F6CA2041BBF600985735 /* APINetwork.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EA70F6CC204221E700985735 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA70F6D220422F7100985735 /* SchoolBusViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA70F6CD2042234700985735 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAC68073204193570059197A /* SchoolBusVC.swift */,
+				EAC68075204193570059197A /* Main.storyboard */,
+				EA70F6CE2042271100985735 /* SchoolBusCollectionCell.swift */,
+				EA70F6D02042272B00985735 /* SchoolBusCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAC68065204193560059197A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +161,8 @@
 				EAC68085204193570059197A /* MapaDomiciliosTests */,
 				EAC68090204193570059197A /* MapaDomiciliosUITests */,
 				EAC6806F204193560059197A /* Products */,
+				D2ECD97CBDBF3C3211D9E1C5 /* Pods */,
+				9B37E208A10D49E88824208B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +179,11 @@
 		EAC68070204193560059197A /* MapaDomicilios */ = {
 			isa = PBXGroup;
 			children = (
+				EA70F6CD2042234700985735 /* View */,
+				EA70F6CC204221E700985735 /* ViewModel */,
+				EA70F6C72041AA0200985735 /* API */,
+				EAC6809F204193C60059197A /* Model */,
 				EAC68071204193560059197A /* AppDelegate.swift */,
-				EAC68073204193570059197A /* ViewController.swift */,
-				EAC68075204193570059197A /* Main.storyboard */,
 				EAC68078204193570059197A /* Assets.xcassets */,
 				EAC6807A204193570059197A /* LaunchScreen.storyboard */,
 				EAC6807D204193570059197A /* Info.plist */,
@@ -125,6 +209,15 @@
 			path = MapaDomiciliosUITests;
 			sourceTree = "<group>";
 		};
+		EAC6809F204193C60059197A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAC680A0204193EA0059197A /* SchoolBus.swift */,
+				EA70F6C52041A74E00985735 /* Stop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC68096204193570059197A /* Build configuration list for PBXNativeTarget "MapaDomicilios" */;
 			buildPhases = (
+				05B0872833686BD62D9A67ED /* [CP] Check Pods Manifest.lock */,
 				EAC6806A204193560059197A /* Sources */,
 				EAC6806B204193560059197A /* Frameworks */,
 				EAC6806C204193560059197A /* Resources */,
+				ED61C2B6ABD5ED303A464E0C /* [CP] Embed Pods Frameworks */,
+				F55C7D95369B44DC94938B3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC68099204193570059197A /* Build configuration list for PBXNativeTarget "MapaDomiciliosTests" */;
 			buildPhases = (
+				1E556D2FBE5C02746FBFBB64 /* [CP] Check Pods Manifest.lock */,
 				EAC6807E204193570059197A /* Sources */,
 				EAC6807F204193570059197A /* Frameworks */,
 				EAC68080204193570059197A /* Resources */,
+				69FD4ABCB653992D9392983D /* [CP] Embed Pods Frameworks */,
+				7C4517F082219E75FF99D511 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC6809C204193570059197A /* Build configuration list for PBXNativeTarget "MapaDomiciliosUITests" */;
 			buildPhases = (
+				471AF71CBD2ABAB7D3DD6B39 /* [CP] Check Pods Manifest.lock */,
 				EAC68089204193570059197A /* Sources */,
 				EAC6808A204193570059197A /* Frameworks */,
 				EAC6808B204193570059197A /* Resources */,
+				CC85F913DD3147E277EBB2BA /* [CP] Embed Pods Frameworks */,
+				2769E98FA8E035232043D0B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +336,7 @@
 			files = (
 				EAC6807C204193570059197A /* LaunchScreen.storyboard in Resources */,
 				EAC68079204193570059197A /* Assets.xcassets in Resources */,
+				EA70F6D12042272B00985735 /* SchoolBusCollectionCell.xib in Resources */,
 				EAC68077204193570059197A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +357,191 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05B0872833686BD62D9A67ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapaDomicilios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E556D2FBE5C02746FBFBB64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapaDomiciliosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2769E98FA8E035232043D0B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomiciliosUITests/Pods-MapaDomiciliosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471AF71CBD2ABAB7D3DD6B39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapaDomiciliosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69FD4ABCB653992D9392983D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomiciliosTests/Pods-MapaDomiciliosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C4517F082219E75FF99D511 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomiciliosTests/Pods-MapaDomiciliosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC85F913DD3147E277EBB2BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomiciliosUITests/Pods-MapaDomiciliosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED61C2B6ABD5ED303A464E0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomicilios/Pods-MapaDomicilios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyHelpers/SwiftyHelpers.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyHelpers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomicilios/Pods-MapaDomicilios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55C7D95369B44DC94938B3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapaDomicilios/Pods-MapaDomicilios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAC6806A204193560059197A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC68074204193570059197A /* ViewController.swift in Sources */,
+				EA70F6C92041AFB000985735 /* BusAPI.swift in Sources */,
+				EA70F6D320422F7100985735 /* SchoolBusViewModel.swift in Sources */,
+				EAC680A1204193EA0059197A /* SchoolBus.swift in Sources */,
+				EA70F6CF2042271100985735 /* SchoolBusCollectionCell.swift in Sources */,
+				EAC68074204193570059197A /* SchoolBusVC.swift in Sources */,
 				EAC68072204193570059197A /* AppDelegate.swift in Sources */,
+				EA70F6C62041A74E00985735 /* Stop.swift in Sources */,
+				EA70F6CB2041BBF600985735 /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +705,7 @@
 		};
 		EAC68097204193570059197A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFCDE7AFCE5A5F42F5F4E5DD /* Pods-MapaDomicilios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +720,7 @@
 		};
 		EAC68098204193570059197A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9193BAAF47FC6A463DC741 /* Pods-MapaDomicilios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +735,7 @@
 		};
 		EAC6809A204193570059197A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B1DFC3B15A7CB190862354 /* Pods-MapaDomiciliosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +752,7 @@
 		};
 		EAC6809B204193570059197A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31F970E28873128809CFA46 /* Pods-MapaDomiciliosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +769,7 @@
 		};
 		EAC6809D204193570059197A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6951FF2605E4D4771B3ACCA /* Pods-MapaDomiciliosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +785,7 @@
 		};
 		EAC6809E204193570059197A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC3A23E3291F453B7833CA3 /* Pods-MapaDomiciliosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
