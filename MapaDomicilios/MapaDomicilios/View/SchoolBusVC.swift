@@ -54,7 +54,7 @@ class SchoolBusVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidLoad() {
@@ -95,8 +95,8 @@ class SchoolBusVC: UIViewController {
         
         self.collectionView.rx
             .modelSelected(Bus.self)
-            .subscribe(onNext: { [weak self] schoolBus in
-                self?.goTo(schoolBus)
+            .subscribe(onNext: { [unowned self] schoolBus in
+                self.goTo(schoolBus)
             }).disposed(by: self.disposeBag)
         
     }

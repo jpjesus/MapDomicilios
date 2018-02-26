@@ -9,20 +9,20 @@
 import RxCocoa
 import RxSwift
 import UIKit
-import Async
 import GoogleMaps
+import Kingfisher
 
 
 
 class RoutesMapVC: UIViewController {
     
-    var mapsView: GMSMapView!
+     var mapsView: GMSMapView!
     
     var viewModel:RoutesMapViewModel?
     private var rx_drawRouter = PublishSubject<Stop>()
-    var disposeBag = DisposeBag()
-    var stops:Bus?
-    let locationManager = CLLocationManager()
+    private var disposeBag = DisposeBag()
+    private let locationManager = CLLocationManager()
+    private var marker = GMSMarker()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -36,6 +36,11 @@ class RoutesMapVC: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         self.setMap()
         rxBind()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.popFadeAnimation()
     }
     
     func rxBind(){
@@ -57,15 +62,8 @@ class RoutesMapVC: UIViewController {
                 self.drawRoute(stop)
             }).disposed(by: self.disposeBag)
         
-        navigationController?.navigationItem.backBarButtonItem?.rx
-            .tap
-            .subscribe(onNext:{ _ in
-                self.navigationController?.popFadeAnimation()
-            }).disposed(by: self.disposeBag)
     }
-    
-    
-    
+
 }
 
 
@@ -74,11 +72,10 @@ extension RoutesMapVC{
     func drawRoute(_ stop:Stop){
         let path = GMSMutablePath()
         if let  coordenades = stop.stops {
-            let camera = GMSCameraPosition.camera(withLatitude: (coordenades.first?.latitude)!, longitude: (coordenades.first?.longitude)!, zoom: 12.0)
-            self.mapsView.camera = camera
             for coord in coordenades {
                 path.add(CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude))
             }
+            createMarker(coordenades)
             let lineRoute = GMSPolyline(path: path)
             lineRoute.strokeWidth = 5
             lineRoute.strokeColor = .blue
@@ -88,17 +85,20 @@ extension RoutesMapVC{
     func setMap(){
             let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 12.0)
             self.mapsView = GMSMapView.map(withFrame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:self.view.frame.size.height), camera: camera)
+            
             self.view.addSubview(self.mapsView)
-        
+    }
+    
+    func createMarker(_ coordenades:[Coordinates]){
+        let camera = GMSCameraPosition.camera(withLatitude: (coordenades.first?.latitude)!, longitude: (coordenades.first?.longitude)!, zoom: 14.0)
+        self.mapsView.camera = camera
+        marker.position = CLLocationCoordinate2D(latitude: (coordenades.first?.latitude)!, longitude: (coordenades.first?.longitude)!)
+        marker.map = mapsView
     }
 }
 
 
-extension RoutesMapVC: GMSMapViewDelegate{
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D){
-        //marker.position = coordinate
-    }
-}
+
 
 extension RoutesMapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -106,9 +106,10 @@ extension RoutesMapVC: CLLocationManagerDelegate {
             return
         }
         locationManager.startUpdatingLocation()
-        
-        mapsView.isMyLocationEnabled = true
-        mapsView.settings.myLocationButton = true
+        self.mapsView.isMyLocationEnabled = true
+        self.mapsView.settings.myLocationButton = true
+        self.mapsView.settings.zoomGestures = true
+       
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
