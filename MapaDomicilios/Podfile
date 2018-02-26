@@ -14,10 +14,8 @@ target 'MapaDomicilios' do
   pod 'RxCocoa',    '~> 4.0.0'
   pod 'Moya/RxSwift', '~> 10.0.0'
   pod 'Moya-ObjectMapper/RxSwift', '~> 2.5'
-  pod 'ReachabilitySwift'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-  pod 'AsyncSwift'
   pod 'SwiftSpinner'
   
   target 'MapaDomiciliosTests' do
