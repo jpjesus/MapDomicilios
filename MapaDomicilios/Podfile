@@ -15,6 +15,10 @@ target 'MapaDomicilios' do
   pod 'Moya/RxSwift', '~> 10.0.0'
   pod 'Moya-ObjectMapper/RxSwift', '~> 2.5'
   pod 'ReachabilitySwift'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'AsyncSwift'
+  pod 'SwiftSpinner'
   
   target 'MapaDomiciliosTests' do
     inherit! :search_paths

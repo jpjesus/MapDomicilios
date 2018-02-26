@@ -11,6 +11,8 @@ import RxSwift
 import Moya
 import Moya_ObjectMapper
 
+
+
 class SchoolBusViewModel {
     
     var disposeBag = DisposeBag()
@@ -35,6 +37,9 @@ class SchoolBusViewModel {
             return results
         }
         return results
+    }
+    
+    init() {
     }
     
     

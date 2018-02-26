@@ -30,7 +30,7 @@ struct  Bus:Mappable , Then {
         id <- map["id"]
         name <- map["name"]
         description <- map["description"]
-        imgURL <- map["stops"]
+        imgURL <- map["img_url"]
         stopUrl <- map["stops_url"]
     }
     

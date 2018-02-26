@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import SwiftyHelpers
+import SwiftSpinner
 
 
 
@@ -31,14 +32,17 @@ extension SectionSchoolBus: SectionModelType {
 
 
 class SchoolBusVC: UIViewController {
-
+    
+    enum Route: String {
+        case busRoute
+    }
     
     //outlets
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.do{
-                 $0.showsVerticalScrollIndicator = false
-                 $0 <= SchoolBusCollectionCell.self
+                $0.showsVerticalScrollIndicator = false
+                $0 <= SchoolBusCollectionCell.self
             }
         }
     }
@@ -46,8 +50,7 @@ class SchoolBusVC: UIViewController {
     //vars
     var disposeBag = DisposeBag()
     fileprivate var viewModel = SchoolBusViewModel()
-    fileprivate let activityIndicator = ActivityIndicator()
-    
+    var router:Router!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -57,18 +60,21 @@ class SchoolBusVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rxBind()
+        router = SchoolBusRoute(viewModel: viewModel)
     }
-
+    
     
     func rxBind(){
-
+        SwiftSpinner.show("Loading bus routes")
         self.viewModel.getSchoolBuses()
             .subscribe { event in
                 switch event {
                 case let .next(response):
                     self.viewModel.schoolBus = response
                     self.viewModel.rx_SchoolBus.value = response
+                    SwiftSpinner.hide()
                 case .error:
+                    SwiftSpinner.hide()
                     self.showOfflineAlert()
                 case .completed:
                     return
@@ -87,6 +93,16 @@ class SchoolBusVC: UIViewController {
             .setDelegate(self)
             .disposed(by: self.disposeBag)
         
+        self.collectionView.rx
+            .modelSelected(Bus.self)
+            .subscribe(onNext: { [weak self] schoolBus in
+                self?.goTo(schoolBus)
+            }).disposed(by: self.disposeBag)
+        
+    }
+    
+    func goTo(_ route:Bus) {
+        router.route(to: Route.busRoute.rawValue, from: self,parameters: route)
     }
 }
 
@@ -115,10 +131,6 @@ extension SchoolBusVC {
         }
     }
     
-    func setupReach(){
-        
-    }
-    
 }
 
 
@@ -128,6 +140,13 @@ extension SchoolBusVC :UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: collectionView.contentSize.width, height: 150)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right:0)
     }
     
     
