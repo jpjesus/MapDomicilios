@@ -1,14 +1,14 @@
 PODS:
   - Alamofire (4.6.0)
   - Differentiator (3.0.2)
-  - GoogleMaps (2.6.0):
-    - GoogleMaps/Maps (= 2.6.0)
-  - GoogleMaps/Base (2.6.0)
-  - GoogleMaps/Maps (2.6.0):
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
     - GoogleMaps/Base
-  - GooglePlaces (2.6.0):
-    - GoogleMaps/Base (= 2.6.0)
-  - Kingfisher (4.6.2)
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
+  - Kingfisher (4.6.1)
   - Moya (10.0.2):
     - Moya/Core (= 10.0.2)
   - Moya-ObjectMapper/Core (2.5):
@@ -53,9 +53,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
-  GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
-  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
@@ -69,4 +69,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f88f7d3261d81e6f9cfdf38c5ef9c3170585b74e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.4.0.beta.2
